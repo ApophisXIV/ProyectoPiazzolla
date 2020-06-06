@@ -2,8 +2,9 @@
   "name": "0.0.1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/js/main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,5 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.0.2"
+  },
+  "dependencies": {
+    "leaflet": "^1.6.0",
+    "python-shell": "^2.0.1"
   }
 }
