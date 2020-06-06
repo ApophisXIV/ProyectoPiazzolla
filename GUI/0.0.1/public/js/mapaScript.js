@@ -12,14 +12,14 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Se crea el objeto globoMarcador cuya funcion es la de marcador en el mapa para el dispositivo transmisor
 const globoMarcador = L.icon({
-    iconUrl: 'public/images/globoMarcadorRojo.svg',
+    iconUrl: 'public/images/GloboMarcadorRojo1.svg',
     iconSize: [80, 80],
     iconAnchor: [43, 22]
   });
 
 //Se crea el objeto baseMarcador cuya funcion es la de marcador en el mapa para la base terrena
 const baseMarcador = L.icon({
-    iconUrl: 'public/images/baseMarcador.png',
+    iconUrl: 'public/images/BaseMarcador1.png',
     iconSize: [50, 50],
 });
 
@@ -37,6 +37,7 @@ bindPopup("<b>Transmisor</b><br>Distancia: 100 km<br>Altitud: 13400 m<br>");
 //Se posiciona el marcador correspondiente a la base y se agrega la funcion de popup
 var popup = L.popup({autoClose: true });
 
+//Event handler de popup 
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
