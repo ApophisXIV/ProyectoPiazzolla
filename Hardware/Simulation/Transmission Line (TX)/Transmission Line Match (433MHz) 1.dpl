@@ -1,0 +1,43 @@
+<QucsStudio Schematic 2.5.7>
+<Properties>
+  <View=-65,-100,1756,938,0.846156,0,0>
+  <Grid=10,10,0>
+  <DataSet=Transmission Line Match (433MHz) 1.dat>
+  <DataDisplay=Transmission Line Match (433MHz) 1.sch>
+  <OpenDisplay=1>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 650 400 530 360 3 #c0c0c0 1 00 1 4e+08 1e+07 5e+08 1 -365.92 50 31.0237 1 0 0 0 315 0 225 "Frecuencia" "Return Loss / Pérdidas por retorno (dB)" "">
+	<Legend 30 -50 1>
+	<"dB(S[1,1])" #0000ff 0 3 0 0 0 1 "RL">
+	  <Mkr 4.33e+08 300 -150 3 1 0>
+  </Rect>
+  <Rect 650 860 530 360 3 #c0c0c0 1 00 1 4e+08 1e+07 5e+08 1 0 100 444.673 1 0 0 0 315 0 225 "Frecuencia" "Impedancia (\Omega)" "">
+	<Legend 10 -100 1>
+	<"Z" #aa55ff 0 3 0 0 0 1 "Impedancia">
+	  <Mkr 4.33e+08 330 -110 3 1 0>
+  </Rect>
+  <Rect 50 860 530 360 3 #c0c0c0 1 00 1 4e+08 1e+07 5e+08 1 -1.05965 5 25 1 0 0 0 315 0 225 "Frecuencia" "ROE / VSWR" "">
+	<Legend 10 -100 1>
+	<"VSWR" #0000ff 0 3 0 0 0 1 "ROE / VSWR">
+	  <Mkr 4.33e+08 80 -210 3 1 0>
+  </Rect>
+  <Smith 110 390 360 360 3 #c0c0c0 1 00 1 0 1 1 1 0 4 1 1 0 1 1 315 0 225 " " " " "">
+	<Legend 20 -80 1>
+	<"S[1,1]" #ff0000 0 3 0 0 0 1 "">
+	  <Mkr 4.33e+08 90 -340 3 1 0>
+  </Smith>
+</Diagrams>
+<Paintings>
+</Paintings>
