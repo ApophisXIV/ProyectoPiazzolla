@@ -36,7 +36,7 @@ function VENTANA_HOME() {
   });
 }
 
-//Una vez este listo para mostrarse el contenido se llama a la funcion VENTANAS para generarlas
+//Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
 app.on('ready', VENTANA_HOME);
 
 
