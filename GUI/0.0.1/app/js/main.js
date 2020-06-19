@@ -2,6 +2,7 @@
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
+const { request } = require('http');
 
 // SET ENV
 process.env.NODE_ENV = 'development';
@@ -27,13 +28,8 @@ function VENTANA_HOME() {
     
   }))
 
-  let {PythonShell} = require('python-shell')
+  require("../../src/bridge/bridge.js");
 
-  PythonShell.run('src/bridge/script/script_1.py', null, function  (err, results)  {
-      if  (err)  throw err;
-      console.log('script_1.py termino.');
-      console.log('lo que devuelve python:', results);
-  });
 }
 
 //Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
