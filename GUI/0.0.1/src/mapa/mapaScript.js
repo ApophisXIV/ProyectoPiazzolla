@@ -18,7 +18,7 @@ const globoMarcador = L.icon({
 
 //Se crea el objeto baseMarcador cuya funcion es la de marcador en el mapa para la base terrena
 const baseMarcador = L.icon({
-    iconUrl: "../../../resources/icons/BaseMarcador1.pnvg",
+    iconUrl: "../../../resources/icons/BaseMarcador1.svg",
     iconSize: [50, 50],
 });
 
