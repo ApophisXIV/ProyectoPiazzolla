@@ -12,7 +12,9 @@ while True:
 
     puertosDisponibles=list(USB_PCB.tools.list_ports.comports())
 
-    print("Prueba de puerto", puertosDisponibles[0])
+
+    if (len(puertosDisponibles)==0):
+        print("No hay puertos disponibles")
 
     for i in puertosDisponibles:
         print(i)
