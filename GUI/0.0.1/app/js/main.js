@@ -26,10 +26,8 @@ function VENTANA_HOME() {
     protocol: 'file',
     slashes: true
     
-  }))
-
-  require("../../src/bridge/bridge.js");
-
+  }));
+  
 }
 
 //Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
