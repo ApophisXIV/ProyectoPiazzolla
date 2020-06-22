@@ -1,3 +1,4 @@
+
 //Se importa el modulo Python Shell para operar con scripts de python desde javascript mediante node
 var {PythonShell} = require('python-shell');
 
@@ -5,10 +6,12 @@ var {PythonShell} = require('python-shell');
 var mensajeDesdePython = new PythonShell('src/bridge/script/script_1.py',{scriptPath:"./", pythonOptions: ['-u']});
 
 //Evento de recepcion de algun mensaje por parte de Python a Node
-mensajeDesdePython.on('message', function (dataRecibida) {
+mensajeDesdePython.on('message',function (dataRecibida) {
+    
 
-    //LOG en la consola de los datos recibidos 
     console.log(dataRecibida);
+
+    document.getElementById("TEXT_2").innerHTML=dataRecibida;
 
 });
 
