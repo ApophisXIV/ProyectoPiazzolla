@@ -8,7 +8,7 @@ const { request } = require('http');
 process.env.NODE_ENV = 'development';
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
 
-const {app, BrowserWindow, Menu, ipcMain} = electron;
+const {app, BrowserWindow, Menu} = electron;
 
 let homeWindow;
 
