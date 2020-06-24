@@ -2,12 +2,13 @@
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
+const { request } = require('http');
 
 // SET ENV
 process.env.NODE_ENV = 'development';
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
 
-const {app, BrowserWindow, Menu, ipcMain} = electron;
+const {app, BrowserWindow, Menu} = electron;
 
 let homeWindow;
 
@@ -25,15 +26,8 @@ function VENTANA_HOME() {
     protocol: 'file',
     slashes: true
     
-  }))
-
-  let {PythonShell} = require('python-shell')
-
-  PythonShell.run('src/bridge/script/script_1.py', null, function  (err, results)  {
-      if  (err)  throw err;
-      console.log('script_1.py termino.');
-      console.log('lo que devuelve python:', results);
-  });
+  }));
+  
 }
 
 //Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
