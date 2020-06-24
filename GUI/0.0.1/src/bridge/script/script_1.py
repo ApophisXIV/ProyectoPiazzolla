@@ -4,8 +4,6 @@ import serial as USB_PCB
 import serial.tools.list_ports
 import random
 
-cont = 0
-
 #***********************#
 #  Variables simuladas  #
 #***********************#
