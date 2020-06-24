@@ -24,14 +24,15 @@ function VENTANA_MAPA() {
     // Proceso de reset cuando se cierra
     mapaWindow.on('close', function(){
     mapaWindow = null;
+    document.getElementById("Flag_MAPA").innerHTML="Mapa cerrado";
     });
 }
 
-function TEST(){
+function Abrir_MAPA(){
 
     if(!mapaWindow){
 
-        document.getElementById("TEXT").innerHTML="BOTON CLICKEADO";
+        document.getElementById("Flag_MAPA").innerHTML="Mapa Abierto";
         VENTANA_MAPA();
     }
 }

@@ -8,7 +8,7 @@ const { request } = require('http');
 process.env.NODE_ENV = 'development';
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
 
-const {app, BrowserWindow, Menu, ipcMain} = electron;
+const {app, BrowserWindow, Menu} = electron;
 
 let homeWindow;
 
@@ -26,10 +26,8 @@ function VENTANA_HOME() {
     protocol: 'file',
     slashes: true
     
-  }))
-
-  require("../../src/bridge/bridge.js");
-
+  }));
+  
 }
 
 //Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
