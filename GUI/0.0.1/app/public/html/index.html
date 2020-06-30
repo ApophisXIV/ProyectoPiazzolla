@@ -7,10 +7,12 @@
 </head>
 
   <body>
-
+  
     <button type="button" id="BotonAbrirMAPA" onclick="Abrir_MAPA()">Clickear para abrir ventana</button>
+    <button type="button" id="BotonAbrirTEMP_GRAPH" onclick="Abrir_TempChart()">Clickear para abrir ventana de Temperatura</button>
 
     <p style="color:peachpuff; background-color: darkslategray;" id="Flag_MAPA">El mapa inicialmente está cerrado</p>
+    <p style="color:peachpuff; background-color: darkslategray;" id="Flag_TEMP_CHART">El grafico de Temperatura inicialmente está cerrado</p>
     
     <h2 style="background-color:darkslategray;">Lista de valores recibidos</h2>
     <dl>
@@ -20,6 +22,7 @@
     </dl>
 
     <script type="text/javascript" src="../../../src/mapa/openMapaScript_W.js"></script>
+    <script type="text/javascript" src="../../../src/temp_graph/openTemp_graph.js"></script>
     <script type="text/javascript" src="../../../src/bridge/bridge.js"></script>
 
 
