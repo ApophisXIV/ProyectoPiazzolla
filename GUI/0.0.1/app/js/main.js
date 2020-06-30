@@ -15,19 +15,20 @@ let homeWindow;
 function VENTANA_HOME() {
 
   //Ventana principal
-  homeWindow = new BrowserWindow({webPreferences:{nodeIntegration: true},width: 720, height: 600});
+  homeWindow = new BrowserWindow({webPreferences:{nodeIntegration: true}, width: 640, height: 480, transparent: false, frame: true});
   
   //Debug, el path orignal era incorrecto.
   //console.log(path.join(__dirname, `../public/html/index.html`));
 
   homeWindow.loadURL(url.format({
 
-    pathname: path.join(__dirname, `../public/html/index.html`),
+    pathname: path.join(__dirname, `../public/html/index_1.html`),
     protocol: 'file',
     slashes: true
     
   }));
-  
+
+  homeWindow.maximize();
 }
 
 //Una vez este listo para mostrarse el contenido se llama a la funcion VENTANA_HOME para generarlas
