@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI Proyecto Piazzolla Screen Init</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main_1.css">
+
+        
+</head>
+
+    <body> 
+
+        <!-------------------------------->
+        <!-- Tarjeta centrada al inicio -->
+        <!-------------------------------->
+        <div id="inicioPiazzollaCARD" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../../resources/images/Piazzolla Vector.png" id="imagenPiazzollaCARD" alt="Isotipo del Proyecto Piazzolla">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 id="tituloPiazzollaCARD">Proyecto Piazzolla</h5>
+                        <p id="cuerpoPiazzollaCARD">Welcome to the Proyecto Piazzolla´s interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+
+
+        <!-------------------------------->
+        <!--   Switch Slide Dark/Light  -->
+        <!-------------------------------->
+        <label class="switch">
+        <input type="checkbox">
+        <span class="slider round" onclick="Modo_Dark_Light()"></span>
+        <!-------------------------------->
+
+
+        <!-------------------------------->
+        <!--       Boton Inicio         -->
+        <!-------------------------------->
+        </label><button id="botonStart" type="button" class="btn btn-primary">Start</button>
+        <!-------------------------------->
+
+
+        <script type="text/javascript" src="../../../src/init_Screen/initScreen.js"></script>
+
+        
+    </body>
+
+</html>
