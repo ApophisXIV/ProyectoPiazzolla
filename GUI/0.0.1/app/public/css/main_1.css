@@ -6,26 +6,6 @@ body{
 
 /*****************************************/
 
-#inicioPiazzollaCARD {
-    position: absolute;
-    bottom:50%;
-    left: 43%;
-    width: 300px;
-    height: 170px;
-    border-color: black;
-}
-
-#imagenPiazzollaCARD{
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    height: 150px;
-    width: 130px;
-    border-color: black;
-}
-
-/*****************************************/
-
 #botonStart {
     position: absolute;
     bottom:30%;
