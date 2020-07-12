@@ -18,19 +18,23 @@ function VENTANA_HOME() {
   
     webPreferences:{nodeIntegration: true}, 
     
-    width: 640, 
+    width: 640,
+
+    height: 480,
+
+    minWidth: 640, 
     
-    height: 480, 
+    minHeight: 480, 
     
     icon: path.join(__dirname, '../../resources/icons/boya.png')
-    
+
   });
 
   
   //Se carga el archivo html de la ventana
   homeWindow.loadURL(url.format({
 
-    pathname: path.join(__dirname, `../public/html/index_1.html`),
+    pathname: path.join(__dirname, `../public/html/index.html`),
     protocol: 'file',
     slashes: true
     
