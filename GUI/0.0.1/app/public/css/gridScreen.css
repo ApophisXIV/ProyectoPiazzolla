@@ -4,3 +4,130 @@ body{
     overflow-x: hidden;
 }
 
+/*****************************************/
+
+#StartTemperature{
+
+    background-color: #EC6051;
+    border-color: #EC6051;
+    width: 100%;
+}
+
+#StartTemperature:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(236, 96, 81, 0.5);
+}
+
+/*****************************************/
+
+#StartPreasure{
+
+    background-color: #E8BA00;
+    border-color: #E8BA00;
+    width: 100%;
+}
+
+#StartPreasure:focus{
+    
+    box-shadow: 0 0 0 0.2rem rgba(236, 186, 0, 0.5);
+}
+
+/*****************************************/
+
+#StartHumidity{
+
+    background-color: #46BF6F;
+    border-color: #46BF6F;
+    width: 100%;
+}
+
+#StartHumidity:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(70, 191, 111, 0.5);
+}
+
+/*****************************************/
+
+#StartInertia{
+
+    width: 100%;
+}
+
+/*****************************************/
+
+#StartExpansionPort{
+
+    background-color: #F92279;
+    border-color: #F92279;
+    width: 100%;
+}
+
+#StartExpansionPort:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(249, 34, 121, 0.5);
+}
+
+/*****************************************/
+
+#StartCommunications{
+
+    background-color: #F92279;
+    border-color: #F92279;
+    width: 100%;
+}
+
+#StartCommunications:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(249, 34, 121, 0.5);
+}
+
+/*****************************************/
+
+#StartPower{
+
+    width: 100%;
+}
+
+/*****************************************/
+
+#StartGeolocation{
+
+    background-color: #46BF6F;
+    border-color: #46BF6F;
+    width: 100%;
+}
+
+#StartGeolocation:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(70, 191, 111, 0.5);
+}
+
+/*****************************************/
+
+#StartTITULOPENDIENTE{
+
+    background-color:  #E8BA00;
+    border-color: #E8BA00;
+    width: 100%;
+}
+
+#StartTITULOPENDIENTE:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(232, 186, 0, 0.5);
+}
+
+/*****************************************/
+
+#StartConfiguration{
+
+    background-color: #EC6051;
+    border-color: #EC6051;
+    width: 100%;
+}
+
+#StartConfiguration:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(236, 96, 81, 0.5);
+}
+
+/*****************************************/
