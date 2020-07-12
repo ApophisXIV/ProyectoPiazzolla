@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;">
+    <g class="currentLayer" style="">
+        <title>Layer 1</title>
+        <path fill="#cccccc" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="11"
+            stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset=""
+            fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end=""
+            d="M84.32966047525406,72.5494396686554 C84.32966047525406,39.40026839793717 112.29927373492256,12.549439668655396 146.82966047525406,12.549439668655396 C181.36004721558555,12.549439668655396 209.32966047525406,39.40026839793717 209.32966047525406,72.5494396686554 C209.32966047525406,105.69861093937362 181.36004721558555,132.5494396686554 146.82966047525406,132.5494396686554 C112.29927373492256,132.5494396686554 84.32966047525406,105.69861093937362 84.32966047525406,72.5494396686554 z"
+            id="svg_1" class="" />
+        <rect fill="#cccccc" stroke="#cccccc" stroke-width="11" stroke-linejoin="round" stroke-dashoffset=""
+            fill-rule="nonzero" id="svg_14" x="56.07691192626953" y="42.175819396972656" width="63.41038131713867"
+            height="61.29670333862305" style="color: rgb(0, 0, 0);" class="" fill-opacity="1" stroke-opacity="1" />
+        <path fill="#cccccc" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="7"
+            stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset=""
+            fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end=""
+            d="M139.35164202298205,73.98923788771944 C139.35164202298205,69.52090652983267 143.2120628656105,65.90155812994439 147.97801452317657,65.90155812994439 C152.74396618074275,65.90155812994439 156.60438702337115,69.52090652983267 156.60438702337115,73.98923788771944 C156.60438702337115,78.4575692456063 152.74396618074275,82.07691764549458 147.97801452317657,82.07691764549458 C143.2120628656105,82.07691764549458 139.35164202298205,78.4575692456063 139.35164202298205,73.98923788771944 z"
+            id="svg_17" class="" />
+        <path fill="#cccccc" stroke="#242424" stroke-width="7" stroke-linejoin="round" stroke-dashoffset=""
+            fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_21"
+            d="M157.6518710167029,60.500428952380275 L165.34417422466476,30.00592219800754 L173.03647743262752,60.500428952380275 L157.6518710167029,60.500428952380275 z"
+            style="color: rgb(0, 0, 0);" class=""
+            transform="rotate(31.466176986694336 165.34419250488278,45.25317382812499) " />
+        <path fill="none" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="11" stroke-dasharray="none"
+            stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1"
+            marker-start="" marker-mid="" marker-end=""
+            d="M24.560441493988037,50.46152541833641 C24.560441493988037,50.364385665305406 40.94387304338301,50.28570246535028 61.1703317463398,50.28570246535028 C81.39679044929659,50.28570246535028 97.78022199869156,50.364385665305406 97.78022199869156,50.46152541833641 C97.78022199869156,50.55866517136744 81.39679044929659,50.63734837132256 61.1703317463398,50.63734837132256 C40.94387304338301,50.63734837132256 24.560441493988037,50.55866517136744 24.560441493988037,50.46152541833641 z"
+            id="svg_26" class="" />
+        <path fill="none" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="11" stroke-dasharray="none"
+            stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1"
+            marker-start="" marker-mid="" marker-end=""
+            d="M11.043956756591797,73.208778359468 C11.043956756591797,73.111638606437 27.427388305986767,73.03295540648188 47.65384700894356,73.03295540648188 C67.88030571190035,73.03295540648188 84.26373726129532,73.111638606437 84.26373726129532,73.208778359468 C84.26373726129532,73.30591811249903 67.88030571190035,73.38460131245415 47.65384700894356,73.38460131245415 C27.427388305986767,73.38460131245415 11.043956756591797,73.30591811249903 11.043956756591797,73.208778359468 z"
+            class="" id="svg_31" />
+        <path fill="none" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="11" stroke-dasharray="none"
+            stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1"
+            marker-start="" marker-mid="" marker-end=""
+            d="M25.549464225769043,96.50548742013694 C25.549464225769043,96.40834766710594 41.93289577516401,96.32966446715079 62.159354478120804,96.32966446715079 C82.3858131810776,96.32966446715079 98.76924473047256,96.40834766710594 98.76924473047256,96.50548742013694 C98.76924473047256,96.602627173168 82.3858131810776,96.6813103731231 62.159354478120804,96.6813103731231 C41.93289577516401,96.6813103731231 25.549464225769043,96.602627173168 25.549464225769043,96.50548742013694 z"
+            class="" id="svg_32" />
+    </g>
+</svg>
