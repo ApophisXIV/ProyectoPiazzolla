@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,108 +8,177 @@
     <link rel="stylesheet" href="../css/gridScreen.css">
     <title>Proyecto Piazzolla GUI</title>
 </head>
+
 <body>
-    <div class="row row-cols-1 row-cols-md-5" style="padding-left: 2%; padding-right: 2%; padding-top: 2%;">
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Temperature</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+    <div class="container" style=" padding-top: 2.5%; min-width: fit-content; min-height: fit-content;">
+        <div class="row row-cols-1 row-cols-md-5">
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-thermometer" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
+                        <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Temperature</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartTemperature" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Preasure</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="../../../resources/icons/Preassure.svg" alt="test"
+                        style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Preasure</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartPreasure" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Humidity</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-droplet" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
+                        <path fill-rule="evenodd"
+                            d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Humidity</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartHumidity" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Inertial</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="../../../resources/icons/Inertia.svg" alt="test"
+                        style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Inertia</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartInertia" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Expansion Port</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-file-plus" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
+                        <path fill-rule="evenodd"
+                            d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Expansion Port</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartExpansionPort" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Communications</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-broadcast-pin" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 0 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707z" />
+                        <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+                        <path fill-rule="evenodd" d="M8 8.5a.5.5 0 0 1 .5.5v6.5a.5.5 0 0 1-1 0V9a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Communications</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartCommunications" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Power</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-battery-charging" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
+                        <path fill-rule="evenodd"
+                            d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z" />
+                        <path fill-rule="evenodd"
+                            d="M6.332 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2.072l.307-1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h3.391l.941-1zM4.45 6H2v4h1.313a1.5 1.5 0 0 1-.405-2.361L4.45 6zm.976 5l-.308 1H6.96l.21-.224h.001l.73-.776H6.53l-.085.09.028-.09H5.426zm1.354-1H5.733l.257-.833H4a.5.5 0 0 1-.364-.843l.793-.843L5.823 6h1.373L5.157 8.167h1.51a.5.5 0 0 1 .478.647L6.78 10zm.69 0h1.374l1.394-1.482.793-.842a.5.5 0 0 0-.364-.843h-1.99L8.933 6H7.887l-.166.54-.199.646A.5.5 0 0 0 8 7.833h1.51L7.47 10zm.725-5H9.24l.308-1H7.706l-.942 1h1.374l.085-.09-.028.09zm2.4-1l-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405zm-.378 6H12V8.02a1.499 1.499 0 0 1-.241.341L10.217 10zM12 6.646V6h-.646a1.5 1.5 0 0 1 .646.646z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Power</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartPower" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Geolocation</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Geolocation</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartGeolocation" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">TITULO PENDIENTE</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-patch-question" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z" />
+                        <path fill-rule="evenodd"
+                            d="M10.273 2.513l-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">TITULO PENDIENTE</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartTITULOPENDIENTE" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="../../../resources/images/PiazzollaLogoLightR.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Configuration</h5>
-                    <p class="card-text">PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                    <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+            <div class="col mb-4">
+                <div class="card">
+                    <svg style="background-color:#cccccc; padding-left: 15%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; width: 100%; height: 100%;"
+                        viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
+                        <path fill-rule="evenodd"
+                            d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Configuration</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartConfiguration" type="button" class="btn btn-primary">Start</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
