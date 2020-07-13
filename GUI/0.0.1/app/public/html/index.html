@@ -1,31 +1,61 @@
-<!DOCTYPE html><html>
-<meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Piazzolla GUI</title>
 
-  <link rel="stylesheet" href="../css/main.css">
-  
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+        
 </head>
 
-  <body>
-  
-    <button type="button" id="BotonAbrirMAPA" onclick="Abrir_MAPA()">Clickear para abrir ventana</button>
-    <button type="button" id="BotonAbrirTEMP_GRAPH" onclick="Abrir_TempChart()">Clickear para abrir ventana de Temperatura</button>
+    <body> 
 
-    <p style="color:peachpuff; background-color: darkslategray;" id="Flag_MAPA">El mapa inicialmente está cerrado</p>
-    <p style="color:peachpuff; background-color: darkslategray;" id="Flag_TEMP_CHART">El grafico de Temperatura inicialmente está cerrado</p>
-    
-    <h2 style="background-color:darkslategray;">Lista de valores recibidos</h2>
-    <dl>
-      <li style="color:peachpuff; background-color: darkslategray;" id="Temp_Elmt">Temperatura Actual</li>
-      <li style="color:peachpuff; background-color: darkslategray" id="Pres_Elmt">Presion Actual</li>
-      <li style="color:peachpuff; background-color: darkslategray" id="Alt_Elmt">Altitud Actual</li>
-    </dl>
+        <!-------------------------------->
+        <!-- Tarjeta centrada al inicio -->
+        <!-------------------------------->
+        <div class="container" style=" padding-top: 2.5%; min-width: fit-content; min-height: fit-content;">
+          <div class="container" style="max-width: 450px; padding-top: 15%;">
+            <div class="card mb-3" id="cardPiazzolla">
+              <div class="row no-gutters">
+                <div class="col-md-6" style="max-height: 250px;">
+                  <img id="LogoPIAZZOLLA" width="95%" height="100%" src="../../../resources/images/PiazzollaLogoLightR.png" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/>
+                </div>
+                <div class="col-md-6" style="max-height: 100px;">
+                  <div class="card-body">
+                    <h5 id="tituloPiazzollaCARD">Proyecto Piazzolla</h5>
+                    <p  id="cuerpoPiazzollaCARD">Welcome to the Proyecto Piazzolla´s interface.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------->
 
-    <script type="text/javascript" src="../../../src/mapa/openMapaScript_W.js"></script>
-    <script type="text/javascript" src="../../../src/temp_graph/openTemp_graph.js"></script>
-    <script type="text/javascript" src="../../../src/bridge/bridge.js"></script>
+
+        <!-------------------------------->
+        <!--   Switch Slide Dark/Light  -->
+        <!-------------------------------->
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round" onclick="Modo_Dark_Light()"></span>
+        </label>
+        <!-------------------------------->
+        
+
+        <!-------------------------------->
+        <!--       Boton Inicio         -->
+        <!-------------------------------->
+        <div class="container">
+          <button id="botonStart" type="button" class="btn btn-primary">Start</button>
+        </div>
+        <!-------------------------------->
 
 
-  </body> 
+        <script type="text/javascript" src="../../../src/init_Screen/index_renderer.js"></script>
+        <script type="text/javascript" src="../../../src/grid_Screen/gridScreen_renderer.js"></script>
 
 </html>
