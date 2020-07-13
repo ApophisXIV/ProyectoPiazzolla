@@ -6,6 +6,97 @@ body{
 
 /*****************************************/
 
+#CardsGrid{
+    margin-top: 2%;
+    /*padding-top: 2.5%; */
+    min-width: fit-content; 
+    min-height: fit-content;
+}
+
+/*****************************************/
+
+#TempICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#PressICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#HumICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#InertiaICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#ExpansionICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#CommICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#PowerICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#GeoICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#PENDIENTE{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+#ConfigICON{
+
+    background-color:#cccccc; 
+    padding: 15%; 
+    height: 100%; 
+    width: 100%;
+}
+
+/*****************************************/
+
 #StartTemperature{
 
     background-color: #EC6051;
