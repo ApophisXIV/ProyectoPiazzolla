@@ -13,8 +13,11 @@
     "electron": "^9.0.4"
   },
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "chart.js": "^2.9.3",
+    "jquery": "^3.5.1",
     "leaflet": "^1.6.0",
+    "popper.js": "^1.16.1",
     "python-shell": "^2.0.1"
   },
   "description": ""
