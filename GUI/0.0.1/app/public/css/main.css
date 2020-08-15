@@ -2,27 +2,55 @@ body{
 
     background-color: white;
     overflow-x: hidden;
+}
 
+#containerCARD{
+
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 20px 0rem;
 }
 
 /*****************************************/
 
+
+@media (min-width:1400px){
+
+    #Tarjeta { 
+        padding-top: 10%;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1399px){
+
+    #Tarjeta { 
+        padding-top: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+@media (min-width:600px) and (max-width:767px){
+
+    #Tarjeta { 
+        padding-top: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+/*****************************************/
+
 #botonStart {
-    position: absolute;
-    bottom:30%;
-    left: 46.5%;
-    width: 80px;
-    height: 40px;
-    
+    position: relative;
+    width: 150px;
 }
 
 /*****************************************/
 
 .switch {
-    position: absolute;
-    bottom: 15%; 
-    left: 47%; 
-    display: inline-block;
+    position: relative;
     width: 60px;
     height: 34px;
 }
@@ -58,11 +86,11 @@ transition: .4s;
 }
 
 input:checked + .slider {
-background-color: #7F00FF;
+background-color: #454A5A;
 }
 
 input:focus + .slider {
-box-shadow: 0 0 1px #7F00FF;
+box-shadow: 0 0 1px #454A5A;
 }
 
 input:checked + .slider:before {
