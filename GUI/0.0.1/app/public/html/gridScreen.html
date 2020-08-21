@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/gridScreen.css">
+    <link rel="stylesheet" id="esquemaCOLOR_css" href="../css/gridScreen.css">
     <title>Proyecto Piazzolla GUI</title>
 </head>
 
 <body>
-    <div id="CardsGrid" class="container">
+    <div id="CardsGrid" class="container-fluid">
         <div class="row row-cols-1 row-cols-md-5">
-            <div class="col mb-4">
-                <div class="card">
+            <div class="col mb-4" >
+                <div class="card" id="tempCARD">
                     <svg id="TempICON" viewBox="0 0 16 16" class="bi bi-thermometer" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
@@ -27,11 +27,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <svg id="PressICON" viewBox="-15 0 90 46" fill="currentColor">
+            <div class="col mb-4" >
+                <div class="card" id="presCARD">
+                    <svg id="PressICON" viewBox="0 0 60 46" fill="currentColor" >
                         <g>
-                            <rect y="45" width="60" height="3" />
+                            <rect y="42.5" width="60" height="3" />
                         </g>
                         <g>
                             <path d="M49.995,43c-3.332,0-4.963-2.608-6.273-4.705C42.444,36.252,41.58,35,39.991,35c-1.588,0-2.45,1.252-3.727,3.295
@@ -100,8 +100,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
+            <div class="col mb-4" >
+                <div class="card" id="humCARD">
                     <svg id="HumICON" viewBox="0 0 16 16" class="bi bi-droplet" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
@@ -117,8 +117,8 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
-                    <svg id="InertiaICON" viewBox="0 0 246 150" fill="currentColor">
+                <div class="card" id="inertiaCARD">
+                    <svg id="InertiaICON" viewBox="-1 0 220 150" fill="currentColor">
                         <path fill="#cccccc" fill-opacity="1" stroke="#242424" stroke-opacity="1" stroke-width="11" stroke-dasharray="none"
                             stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1"
                             marker-start="" marker-mid="" marker-end=""
@@ -162,7 +162,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="expansionCARD">
                     <svg id="ExpansionICON" viewBox="0 0 16 16" class="bi bi-file-plus" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
@@ -178,7 +178,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="commCARD">
                     <svg id="CommICON" viewBox="0 0 16 16" class="bi bi-broadcast-pin" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 0 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707z" />
@@ -194,7 +194,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="powerCARD">
                     <svg id="PowerICON" viewBox="0 0 16 16" class="bi bi-battery-charging" fill="currentColor">
                         <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
                         <path fill-rule="evenodd"
@@ -211,7 +211,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="geoCARD">
                     <svg id="GeoICON" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -225,7 +225,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="pendienteCARD">
                     <svg id="PENDIENTE" viewBox="0 0 16 16" class="bi bi-patch-question" fill="currentColor">
                         <path
                             d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z" />
@@ -241,7 +241,7 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card">
+                <div class="card" id="configCARD">
                     <svg id="ConfigICON" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
@@ -258,6 +258,9 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="../../../src/grid_Screen/gridScreen_renderer.js"></script>
+
 </body>
 
 </html>
