@@ -15,6 +15,78 @@ body{
 
 /*****************************************/
 
+#tempCARD{
+    
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#presCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#humCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#inertiaCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#expansionCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#commCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#powerCARD{
+  
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#geoCARD{
+   
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#pendienteCARD{
+  
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+#configCARD{
+    
+    border-width: 0px;
+    box-shadow: rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem;
+
+}
+
+/*****************************************/
+
 #TempICON{
 
     background-color:#cccccc; 
