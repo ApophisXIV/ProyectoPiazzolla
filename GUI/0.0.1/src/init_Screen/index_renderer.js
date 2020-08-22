@@ -1,4 +1,6 @@
 
+const ipcRenderer = require('electron').ipcRenderer;
+
 //Evento al presionar la barra espaciadora (Evitar que el slider selector conmute sin generar ninguna acción)
 window.onkeydown = function(teclaPresionada){
 
@@ -10,23 +12,8 @@ window.onkeydown = function(teclaPresionada){
     }
 };
 
-const botonStart_DARK_focus = document.createElement('style');
-botonStart_DARK_focus.innerHTML = `
-
-    #botonStart:focus {
-        box-shadow: 0 0 0 0.2rem rgba(255, 0, 255, 0.25);
-    }
-`;
-
-const botonStart_LIGHT_focus = document.createElement('style');
-botonStart_LIGHT_focus.innerHTML = `
-
-    #botonStart:focus {
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    }
-`;
-
-function Modo_Dark_Light(){
+//Listener Switch Dark-Light Mode
+document.getElementById("switchDARK_LIGHT").addEventListener("click", function(){
 
     var colorActual=document.body.style.backgroundColor;
 
@@ -34,21 +21,19 @@ function Modo_Dark_Light(){
     if(colorActual!="rgb(20, 15, 42)"){
 
         document.body.style.backgroundColor="#140F2A";
-        document.body.style.transition="0.4s";                
+        document.body.style.transition="0.4s";
         document.getElementById("tituloPiazzollaCARD").style.color="#FFFFFF";
         document.getElementById("subtituloPiazzollaCARD").style.color="#FFFFFF";
         document.getElementById("descripcionPiazzollaCARD").style.color="#FFFFFF";
         document.getElementById("divisionPiazzollaCARD").style.borderTopColor="#FFFFFF"; 
         document.getElementById("containerCARD").style.borderColor="#353251"; 
         document.getElementById("containerCARD").style.boxShadow="rgba(65, 56, 100, 0.5) 0px 0px 20px 1rem"; 
-
         document.getElementById("cardPiazzolla").style.backgroundColor="#212432";
         document.getElementById("cardPiazzolla").style.transition="0.4s";                
-        document.getElementById("botonStart").style.backgroundColor="#454A5A";
         document.getElementById("botonStart").style.borderColor="#454A5A";
+        document.getElementById("botonStart").style.boxShadow="rgba(158, 158, 158, 0.85) 0px 0px 10px 0px"        
+        document.getElementById("botonStart").style.backgroundColor="#454A5A";
         document.getElementById("botonStart").style.transition="0.4s";    
-        document.head.appendChild(botonStart_DARK_focus);       
-        // document.getElementById("LogoPIAZZOLLA").src="../../../resources/images/PiazzollaLogoDarkR.png";
     }
 
     //Cambio de violeta a blanco
@@ -62,15 +47,28 @@ function Modo_Dark_Light(){
         document.getElementById("divisionPiazzollaCARD").style.borderTopColor="#D1D4D7"; 
         document.getElementById("containerCARD").style.borderColor="#FFFFFF"; 
         document.getElementById("containerCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 20px 0rem"; 
-        
         document.getElementById("cardPiazzolla").style.backgroundColor="#E9ECEF";         
-        document.getElementById("cardPiazzolla").style.transition="0.4s";                
-        document.getElementById("botonStart").style.backgroundColor="#007bff";                
+        document.getElementById("cardPiazzolla").style.transition="0.4s";          
         document.getElementById("botonStart").style.borderColor="#007bff";
+        document.getElementById("botonStart").style.boxShadow="rgba(0, 123, 255, 0.25) 0px 0px 10px 0px"        
+        document.getElementById("botonStart").style.backgroundColor="#007bff";                
         document.getElementById("botonStart").style.transition="0.4s"; 
-        document.head.appendChild(botonStart_LIGHT_focus);
-        // document.getElementById("LogoPIAZZOLLA").src="../../../resources/images/PiazzollaLogoLightR.png";
+    }
+});
+
+//Listener boton start
+document.getElementById("botonStart").addEventListener("click", function(){
+
+    if(document.body.style.backgroundColor=="rgb(20, 15, 42)"){
+
+        ipcRenderer.send("ventana_INDEX","CAMBIAR_VENTANA_HOME_MODO_OSCURO");
+
     }
 
+    else{
 
-}
+        ipcRenderer.send("ventana_INDEX","CAMBIAR_VENTANA_HOME_MODO_CLARO");
+
+    }
+
+});
