@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Piazzolla GUI</title>
+
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/usbWindow.css">
+
+</head>
+<body>
+
+    <div class="container h-100">
+        <div class="d-flex h-100">
+            <div class="align-self-center mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">USB Connection</h5>
+                        <p class="card-text">PiazzollaPiazzolla.</p>
+                        <div class="input-group sm-3">
+                            <div class="input-group-prepend">
+                                <button id="boton_ConectarDesconectar" type="button" class="btn btn-success" disabled>Connect</button>                        
+                                <select class="custom-select rounded-0" id="listaBauds" disabled>     
+                                    <option id="elementoRootBAUD" hidden>
+                                    <option value="300">300</option>
+                                    <option value="1200">1200</option>
+                                    <option value="2400">2400</option>
+                                    <option value="4800">4800</option>
+                                    <option value="6400">6400</option>
+                                    <option value="7200">7200</option>
+                                    <option value="9600">9600</option>
+                                    <option value="14400">14400</option>
+                                    <option value="19200">19200</option>
+                                    <option value="28800">28800</option>
+                                    <option value="38400">38400</option>
+                                    <option value="57600">57600</option>
+                                    <option value="115200">115200</option>    
+                                </select>
+                                <select class="custom-select" id="listaPuertos">     
+                                    <option id="elementoRootPORTS" hidden>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../src/usbWindow/usbWindow_renderer.js"></script>
+
+</body>
+</html>
