@@ -48,6 +48,16 @@ ipcRenderer.on('ventana_gridSCREEN', (event, cardsPropiedades) => {
             document.getElementById("pendienteCARD").style.boxShadow="var(--yellow) 0px 0px 16px 0rem";
             document.getElementById("configCARD").style.boxShadow="var(--orange) 0px 0px 16px 0rem";
         
+            document.getElementById("StartTemperature").setAttribute("disabled","");
+            document.getElementById("StartPreasure").setAttribute("disabled","");
+            document.getElementById("StartHumidity").setAttribute("disabled","");
+            document.getElementById("StartInertia").setAttribute("disabled","");
+            document.getElementById("StartExpansionPort").setAttribute("disabled","");    
+            document.getElementById("StartPower").setAttribute("disabled","");
+            document.getElementById("StartGeolocation").setAttribute("disabled","");
+            document.getElementById("StartTITULOPENDIENTE").setAttribute("disabled","");
+            document.getElementById("StartConfiguration").setAttribute("disabled","");
+
         break;
             
         case false:
@@ -68,6 +78,44 @@ ipcRenderer.on('ventana_gridSCREEN', (event, cardsPropiedades) => {
             document.getElementById("geoCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
             document.getElementById("pendienteCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
             document.getElementById("configCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
+
+            document.getElementById("StartTemperature").setAttribute("disabled","");
+            document.getElementById("StartPreasure").setAttribute("disabled","");
+            document.getElementById("StartHumidity").setAttribute("disabled","");
+            document.getElementById("StartInertia").setAttribute("disabled","");
+            document.getElementById("StartExpansionPort").setAttribute("disabled","");    
+            document.getElementById("StartPower").setAttribute("disabled","");
+            document.getElementById("StartGeolocation").setAttribute("disabled","");
+            document.getElementById("StartTITULOPENDIENTE").setAttribute("disabled","");
+            document.getElementById("StartConfiguration").setAttribute("disabled","");
+
+        break;
+
+        case "USB_ON":
+
+            document.getElementById("StartTemperature").removeAttribute("disabled");
+            document.getElementById("StartPreasure").removeAttribute("disabled");
+            document.getElementById("StartHumidity").removeAttribute("disabled");
+            document.getElementById("StartInertia").removeAttribute("disabled");
+            document.getElementById("StartExpansionPort").removeAttribute("disabled");    
+            document.getElementById("StartPower").removeAttribute("disabled");
+            document.getElementById("StartGeolocation").removeAttribute("disabled");
+            document.getElementById("StartTITULOPENDIENTE").removeAttribute("disabled");
+            document.getElementById("StartConfiguration").removeAttribute("disabled");
+            
+        break;
+
+        case "USB_OFF":
+
+            document.getElementById("StartTemperature").setAttribute("disabled","");
+            document.getElementById("StartPreasure").setAttribute("disabled","");
+            document.getElementById("StartHumidity").setAttribute("disabled","");
+            document.getElementById("StartInertia").setAttribute("disabled","");
+            document.getElementById("StartExpansionPort").setAttribute("disabled","");    
+            document.getElementById("StartPower").setAttribute("disabled","");
+            document.getElementById("StartGeolocation").setAttribute("disabled","");
+            document.getElementById("StartTITULOPENDIENTE").setAttribute("disabled","");
+            document.getElementById("StartConfiguration").setAttribute("disabled","");
 
         break;
 
@@ -197,104 +245,65 @@ ipcRenderer.on('ventana_gridSCREEN', (event, cardsPropiedades) => {
 
         break;
     }
-    if(colorCards=="MODO_OSCURO"){
-
-        document.body.style.backgroundColor="#140F2A";
-
-        colorSwitch("card-body","#212432",1);
-        colorSwitch("card-title","#FFFFFF",0);
-        colorSwitch("card-text","#FFFFFF",0);
-
-        document.getElementById("tempCARD").style.boxShadow="var(--orange) 0px 0px 16px 0rem";
-        document.getElementById("presCARD").style.boxShadow="var(--yellow) 0px 0px 16px 0rem";
-        document.getElementById("humCARD").style.boxShadow="var(--green) 0px 0px 16px 0rem";
-        document.getElementById("inertiaCARD").style.boxShadow="var(--blue) 0px 0px 16px 0rem";
-        document.getElementById("expansionCARD").style.boxShadow="var(--pink) 0px 0px 16px 0rem";
-        document.getElementById("commCARD").style.boxShadow="var(--pink) 0px 0px 16px 0rem";
-        document.getElementById("powerCARD").style.boxShadow="var(--blue) 0px 0px 16px 0rem";
-        document.getElementById("geoCARD").style.boxShadow="var(--green) 0px 0px 16px 0rem";
-        document.getElementById("pendienteCARD").style.boxShadow="var(--yellow) 0px 0px 16px 0rem";
-        document.getElementById("configCARD").style.boxShadow="var(--orange) 0px 0px 16px 0rem";
-    }
-
-    else{
-
-        document.body.style.backgroundColor="#FFFFFF";
-
-        colorSwitch("card-body","#FFFFFF",1);
-        colorSwitch("card-title","#212529",0);
-        colorSwitch("card-text","#212529",0);
-
-        document.getElementById("tempCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("presCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("humCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("inertiaCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("expansionCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("commCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("powerCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("geoCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("pendienteCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-        document.getElementById("configCARD").style.boxShadow="rgba(29, 33, 36, 0.7) 0px 0px 16px 0rem";
-    }
     
 });
 
 //Listener boton start
-document.getElementById("StartTemperature").addEventListener("click", function(){
+document.getElementById("StartTemperature").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_TEMPERATURA");
 });
 
 
-document.getElementById("StartPreasure").addEventListener("click", function(){
+document.getElementById("StartPreasure").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_PRESION");
 });
 
 
-document.getElementById("StartHumidity").addEventListener("click", function(){
+document.getElementById("StartHumidity").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_HUMEDAD");
 });
 
 
-document.getElementById("StartInertia").addEventListener("click", function(){
+document.getElementById("StartInertia").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_INERCIA");
 });
 
 
-document.getElementById("StartExpansionPort").addEventListener("click", function(){
+document.getElementById("StartExpansionPort").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_EXPANSION_PORT");
 });
 
 
-document.getElementById("StartCommunications").addEventListener("click", function(){
+document.getElementById("StartCommunications").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_COMM");
 });
 
 
-document.getElementById("StartPower").addEventListener("click", function(){
+document.getElementById("StartPower").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_POWER");
 });
 
 
-document.getElementById("StartGeolocation").addEventListener("click", function(){
+document.getElementById("StartGeolocation").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_GEO");
 });
 
 
-document.getElementById("StartTITULOPENDIENTE").addEventListener("click", function(){
+document.getElementById("StartTITULOPENDIENTE").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_TITULOPENDIENTE");
 });
 
 
-document.getElementById("StartConfiguration").addEventListener("click", function(){
+document.getElementById("StartConfiguration").addEventListener("click", () => {
     
     ipcRenderer.send("ventana_gridSCREEN","ABRIR_VENTANA_CONFIG");
 });
