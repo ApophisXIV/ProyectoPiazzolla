@@ -3,6 +3,8 @@ const electron = require('electron');
 const path = require('path');
 const url = require('url');
 
+let {PythonShell} = require('python-shell');
+
 // SET ENV
 process.env.NODE_ENV = 'development';
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
@@ -29,6 +31,8 @@ function VENTANA_TEMPERATURA(){
     //Ventana principal
     tempWindow = new BrowserWindow({
     
+      parent: homeWindow,
+
       webPreferences:{nodeIntegration: true}, 
       
       width: 640,
@@ -51,7 +55,7 @@ function VENTANA_TEMPERATURA(){
       slashes: true
       
     }));
-    
+
     // Proceso de reset cuando se cierra
     tempWindow.on('close', ()=>{
     
@@ -234,36 +238,42 @@ function VENTANA_COMM(){
     //Ventana principal
     commWindow = new BrowserWindow({
     
+      parent: {homeWindow},
+
       webPreferences:{nodeIntegration: true}, 
       
-      width: 640,
+      width: 360,
 
-      height: 480,
+      height: 250,
 
-      minWidth: 640, 
+      minWidth: 360, 
       
-      minHeight: 480,
+      minHeight: 250,
 
-      icon: path.join(__dirname, '../../resources/icons/boya.png')
+      icon: path.join(__dirname, '../../resources/icons/boya.png'),
+
+      maximizable: false
 
     });
     
     //Se carga el archivo html de la ventana
     commWindow.loadURL(url.format({
 
-      pathname: path.join(__dirname, `../public/html/tempWindow.html`),
+      pathname: path.join(__dirname, `../public/html/usbWindow.html`),
       protocol: 'file',
       slashes: true
       
     }));
-    
+
+    //commWindow.removeMenu();
+
     // Proceso de reset cuando se cierra
     commWindow.on('close', ()=>{
     
       commWindow = null;
       homeWindow.webContents.send('ventana_gridSCREEN', 'COMM_CLOSE');
     });
-
+    
   }
 
 }
@@ -432,6 +442,163 @@ function VENTANA_CONFIG(){
 
 }
 
+function TOKEN_DATA(dataRAW_USB,timeSTAMP) {
+
+  //Se utiliza el ultimo caracter de dataRecibida para verificar la naturaleza del dato recibido
+  switch (dataRAW_USB.substr(dataRAW_USB.length - 1)){
+        
+    //Si tiene el caracter identificatorio "t"
+    case 'v':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN TEMP BMP: ",dataRAW_USB.split('v')[0]);
+
+        //Manda la data pero cuando se cierra la ventana se pierde. Para evitar eso
+        //hay que resgistrarlo en un archivo txt desde python
+        if(tempWindow != null){
+                  
+          tempWindow.webContents.send("ventana_tempWINDOW",[dataRAW_USB.split('v')[0],timeSTAMP]);
+
+        }
+
+        //tempDATA_array.push(dataRAW_USB.split('v')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+
+    //Si tiene el caracter identificatorio "t"
+    case 'q':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('q')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN PRES BMP: ",dataRAW_USB.split('q')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('q')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+  
+    //Si tiene el caracter identificatorio "t"
+    case 'a':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('a')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN ALTITUD: ",dataRAW_USB.split('a')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('a')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+    
+    //Si tiene el caracter identificatorio "t"
+    case 'h':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('h')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN TEMP HDC: ",dataRAW_USB.split('h')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('h')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+
+    //Si tiene el caracter identificatorio "t"
+    case 'f':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('f')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN HUM HDC: ",dataRAW_USB.split('f')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('f')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+  
+    //Si tiene el caracter identificatorio "t"
+    case 'k':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('k')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN VLDO: ",dataRAW_USB.split('k')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('k')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+    
+    //Si tiene el caracter identificatorio "t"
+    case 'z':
+
+        //Se "tokenizan" los datos recibidos en base al caracter 't'
+        //dataToken=dataRAW_USB.split('z')[0];
+
+        //DEBUG
+        //console.log("Tiene T");
+        console.log("TOKEN ACIMUT: ",dataRAW_USB.split('z')[0]);
+
+        //tempDATA_array.push(dataRAW_USB.split('z')[0]);
+        
+        //console.log(tempDATA_array);
+
+        //Se pasa al DOM el valor del token de temperatura
+        // document.getElementById("Temp_Elmt").innerHTML=tokens_Data[0]+" °C";
+
+    break;
+
+    default:
+        
+        //Se indica en consola que no hay datos disponibles con los identificadores requeridos
+
+        //DEBUG
+        console.log("No tiene ninguno de los identificadores validos -> " + dataRAW_USB);
+    
+    break;
+
+  }
+}
+
 function VENTANA_HOME() {
 
   //Ventana principal
@@ -454,14 +621,15 @@ function VENTANA_HOME() {
   //Se carga el archivo html de la ventana
   homeWindow.loadURL(url.format({
 
-    pathname: path.join(__dirname, `../public/html/index.html`),
+    //pathname: path.join(__dirname, `../public/html/index.html`),
+    pathname: path.join(__dirname, `../public/html/gridScreen.html`),
     protocol: 'file',
     slashes: true
     
   }));
 
   //Se maximiza la ventana
-  homeWindow.maximize();
+  //homeWindow.maximize();
   
   // Al cerrarse la ventana home se cierran todas las ventantas abiertas por la aplicacion
   homeWindow.on('close', ()=>{
@@ -561,6 +729,8 @@ function VENTANA_HOME() {
 
   let colorBool = false;
 
+  let commPythonBridge_CONNECT = null;
+
   //Canal de comunicación asincrono del proceso renderer de la ventana Index
   ipcMain.on("ventana_INDEX",(evento_Index,mensajeCLOSE)=>{
 
@@ -612,8 +782,6 @@ function VENTANA_HOME() {
 
   //Canal de comunicación asincrono del proceso renderer de la ventana gridScreen
   ipcMain.on("ventana_gridSCREEN",(evento_gridSCREEN,mensajeVENTANAS_PARAMETROS)=>{
-
-    
 
     switch (mensajeVENTANAS_PARAMETROS) {
       
@@ -710,6 +878,62 @@ function VENTANA_HOME() {
       break;
     }
 
+  });
+
+  //Canal de comunicación asincrono del proceso renderer de la ventana usbWindow
+  ipcMain.on("ventana_usbWINDOW",(evento_usbWindow,mensajePUERTOS)=>{
+        
+    console.log("Mensaje RX= "+mensajePUERTOS);
+
+    if(commPythonBridge_CONNECT==null){
+
+      commPythonBridge_CONNECT = new PythonShell('src/usbWindow/script/usbConnect.py',{scriptPath:"./", pythonOptions: ['-u'], args: [mensajePUERTOS[0],mensajePUERTOS[1],mensajePUERTOS[2]]});
+
+    }
+
+    if(mensajePUERTOS[2]=="CONECTAR"){
+
+      homeWindow.webContents.send("ventana_gridSCREEN","USB_ON");
+
+      commPythonBridge_CONNECT.on('message', (data_LINKER) => {
+        
+        //DEBUG
+        //console.log(data_LINKER);
+
+        TOKEN_DATA(data_LINKER,new Date().toLocaleTimeString());
+
+      });
+
+      //Funcion error. Handler del error en la Pyshell o fin de ejecucion del script
+      commPythonBridge_CONNECT.end( (err) => {
+
+        //Si termina el script, y efectivamente hay un error se devuelve el error
+        if (err){
+            
+            //Devuelve el error arrojado si hubo error
+            throw err;
+        } 
+
+        //Se indica si termino el script por consola
+        console.log('EL SCRIPT TERMINO');
+
+      });
+
+    }
+
+    else{
+
+      homeWindow.webContents.send("ventana_gridSCREEN","USB_OFF");
+
+    }
+
+  });
+
+  ipcMain.on("ventana_tempWINDOW",(evento_tempWINDOW,mensajeTempWINDOW) =>{
+
+    console.log(mensajeTempWINDOW);
+
+    
   });
 
 }
