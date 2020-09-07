@@ -3,16 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" id="esquemaCOLOR_css" href="../css/gridScreen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Proyecto Piazzolla GUI</title>
+
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/gridScreen.css">
+
 </head>
 
 <body>
-    <div id="CardsGrid" class="container-fluid">
+
+    <div class="container-fluid"> 
         <div class="row row-cols-1 row-cols-md-5">
-            <div class="col mb-4" >
+            <div class="col mb-4">
+                <div class="card" id="commCARD">
+                    <svg id="CommICON" viewBox="0 0 16 16" class="bi bi-broadcast-pin" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 0 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707z" />
+                        <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+                        <path fill-rule="evenodd" d="M8 8.5a.5.5 0 0 1 .5.5v6.5a.5.5 0 0 1-1 0V9a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Communications</h5>
+                        <p class="card-text">
+                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
+                        <button id="StartCommunications" type="button" class="btn btn-primary">Start</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
                 <div class="card" id="tempCARD">
                     <svg id="TempICON" viewBox="0 0 16 16" class="bi bi-thermometer" fill="currentColor">
                         <path fill-rule="evenodd"
@@ -27,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-4" >
+            <div class="col mb-4">
                 <div class="card" id="presCARD">
                     <svg id="PressICON" viewBox="0 0 60 46" fill="currentColor" >
                         <g>
@@ -100,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-4" >
+            <div class="col mb-4">
                 <div class="card" id="humCARD">
                     <svg id="HumICON" viewBox="0 0 16 16" class="bi bi-droplet" fill="currentColor">
                         <path fill-rule="evenodd"
@@ -178,22 +197,6 @@
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card" id="commCARD">
-                    <svg id="CommICON" viewBox="0 0 16 16" class="bi bi-broadcast-pin" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 0 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707z" />
-                        <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
-                        <path fill-rule="evenodd" d="M8 8.5a.5.5 0 0 1 .5.5v6.5a.5.5 0 0 1-1 0V9a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <div class="card-body">
-                        <h5 class="card-title">Communications</h5>
-                        <p class="card-text">
-                            PiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzollaPiazzolla</p>
-                        <button id="StartCommunications" type="button" class="btn btn-primary">Start</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
                 <div class="card" id="powerCARD">
                     <svg id="PowerICON" viewBox="0 0 16 16" class="bi bi-battery-charging" fill="currentColor">
                         <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
@@ -258,7 +261,6 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="../../../src/grid_Screen/gridScreen_renderer.js"></script>
 
 </body>
