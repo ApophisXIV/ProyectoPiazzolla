@@ -1,0 +1,33 @@
+html{
+
+    height: 100%;
+}
+
+body{
+
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/*****************************************/
+
+.custom-select{
+
+    /* background-color: var(--info); */
+    /* background-color: ; */
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+}
+
+#boton_ConectarDesconectar{
+
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
