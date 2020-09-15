@@ -46,7 +46,7 @@
         /****************************/
     #endif 
 
-    #ifdef BMP280_ENABLED || HDC1080_ENABLED || QMC5883L_ENABLED || MPU6050_ENABLED
+    #if defined(BMP280_ENABLED)|| defined(HDC1080_ENABLED) || defined(QMC5883L_ENABLED) || defined(MPU6050_ENABLED)
         /****************************/
         /*           I2C            */
         /****************************/
