@@ -2,7 +2,7 @@
 
     #define __delayNB_H__
 
-    #include <Arduino.h>
+    #include <Hardware/Hardware_usage.h>
 
     void delayNoBloqueante (uint8_t tiempoDelay);
 
