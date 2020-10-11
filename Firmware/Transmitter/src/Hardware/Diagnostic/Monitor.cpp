@@ -4,11 +4,7 @@
 
     #include <Hardware/Diagnostic/Monitor.h>
 
-    #include <Hardware/GPIO.h>
-
-    #include <Hardware/Utilities/delayNB.h>
-
-    void Error_Monitor::SetGPIO(){
+    void Error_Monitor::setGPIO(){
 
         pinMode(LED_ERROR_A,1);
         pinMode(LED_ERROR_B,1);
@@ -21,8 +17,10 @@
         for (uint8_t i=0; i<15; i++){
 
             ErrorValue(i);
-            delayNoBloqueante(100);
+            delayNoBloqueante(10);
         }
+
+        ErrorValue(0);
 
     }
     
@@ -74,7 +72,7 @@
         delayNoBloqueante(Transicion);
     }
 
-    void Error_Monitor::ErrorValue(uint8_t Error){
+    uint8_t Error_Monitor::ErrorValue(uint8_t Error){
 
         switch (Error){
 
@@ -212,6 +210,8 @@
             
             break;
         }
+
+        return (0);
     }
 
     void Error_Monitor::ErrorCodeInternal(bool LED_D, bool LED_C, bool LED_B, bool LED_A, uint8_t Transicion) {
