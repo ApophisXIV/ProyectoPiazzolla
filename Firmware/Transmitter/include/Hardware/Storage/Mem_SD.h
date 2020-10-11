@@ -1,16 +1,28 @@
 #ifndef __Mem_SD_H__
 
     #define __Mem_SD_H__
-    
-    #include <SD.h>
 
+    #include <hardware/Hardware_usage.h>
+
+    #include <Hardware/GPIO.h>
+
+    #include <SD.h>
+    
     class SD_CARD{
+        
+        File archivoSelfTest;
+
+        Sd2Card TarjetaSD;
+
+        SdVolume volume;
+
+        SdFile root;
 
         public:
 
-        void SetGPIO();
+        void setGPIO();
 
-        bool selfTest();
+        uint8_t selfTest();
 
         void formatoArchivo(bool formato_CSV_JSON);
 
@@ -23,7 +35,12 @@
         void saveVBateria(float tensionBateria);
 
         void saveVLDO(float tensionLDO);
-        
+
+        private:
+
+        bool tarjetaInsertadaEnSlot();
+
+        bool dataProtect();
     };
 
 #endif
