@@ -4,19 +4,25 @@
 
     #include <Hardware/Analog/LDO.h>
 
+    LDO_Reg::LDO_Reg(){
+        
+    }
+
     void LDO_Reg::setGPIO(){
 
         pinMode(LDO_ENABLE,1);
         pinMode(LDO_ADC,4); // 4 = Entrada analogica -> Canal del ADC
+        analogReadResolution(12);
     }
 
     bool LDO_Reg::selfTest(){
 
-        digitalWrite(LDO_ENABLE,1);
-        
-        //HAL_GPIO_WritePin(GPIOB,5,GPIO_PIN_SET);
+        LDO_Reg::setGPIO();
 
-        if(ADC_RES*analogRead(LDO_ADC)<=3.00){//~90% de la tensión nominal de trabajo del regulador 
+        digitalWrite(LDO_ENABLE,1);
+            
+
+        if((float_t)(ADC_RES*analogRead(LDO_ADC))<=3.00){//~90% de la tensión nominal de trabajo del regulador 
 
             digitalWrite(LDO_ENABLE,0);
 
@@ -28,7 +34,7 @@
 
             digitalWrite(LDO_ENABLE,0);
 
-            if(ADC_RES*analogRead(LDO_ADC)>=0.33){//~10% de la tensión nominal de trabajo del regulador 
+            if((float_t)(ADC_RES*analogRead(LDO_ADC))>=0.33){//~10% de la tensión nominal de trabajo del regulador 
 
                 digitalWrite(LDO_ENABLE,0); //Reintenta apagar el regulador
 
