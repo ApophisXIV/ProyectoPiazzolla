@@ -9,18 +9,19 @@
     #include <Hardware/Utilities/delayNB.h>
 
     /************************************************************
-     * Error 0 ->   No hay error
-     * Error 1 ->   Error en la lectura o escritura de la memoria 
-     *              flash
-     * Error 2 ->   La memoria SD no esta insertada en
-     *              el slot o esta activado el switch de 
-     *              dataProtect
-     * Error 3 ->   La memoria SD no fue inicializada
-     *              correctamente o no pudo ser escrito o
-     *              leido el archivo de prueba
-     * Error 4 ->   Error en la inicializacion del modulo LoRa
-     * Error 5 ->   Prueba Echo Test = Fallida       
-     ***********************************************************/
+    * Error 0 ->   No hay error
+    * Error 1 ->   Error en la lectura o escritura de la memoria 
+    *              flash
+    * Error 2 ->   La memoria SD no esta insertada en
+    *              el slot o esta activado el switch de 
+    *              dataProtect
+    * Error 3 ->   La memoria SD no fue inicializada
+    *              correctamente o no pudo ser escrito o
+    *              leido el archivo de prueba
+    * Error 4 ->   Error en la inicializacion del modulo LoRa
+    * Error 5 ->   Prueba Echo Test = Fallida     
+    * Error 6 ->   Error en el LDO  
+    ***********************************************************/
     
     //Si hay error devuelve valores diferentes de 0
     //Si no hay error devuelve 0
@@ -29,24 +30,30 @@
 
         public:
 
-        void setGPIO();
+        Error_Monitor();
 
         void selfTest();
 
-        void BarridoUSB_Conectando();
-
-        void BeepBeep(uint8_t Transicion);
-
-        void BeepBeepAll(uint8_t Transicion);
-
-        void MensajeEntrante(uint8_t Transicion);
-
-        uint8_t ErrorValue(uint8_t Error);
+        void beepBeep(uint8_t Transicion);
 
         private:
+        
+        void setGPIO();
 
-        void ErrorCodeInternal(bool LED_D, bool LED_C, bool LED_B, bool LED_A, uint8_t Transicion);
+        void errorCodeInternal(bool LED_D, bool LED_C, bool LED_B, bool LED_A, uint8_t Transicion);
+        
+        //Metodos a heredar por la clase USB
+        protected:
 
+        uint8_t errorValue(uint8_t Error);
+
+        void beepBeepAll(uint8_t Transicion);
+
+        void dualBaliza_USART_Conectando();
+
+        void barridoUSB_Conectando();
+
+        void mensajeEntrante(uint8_t Transicion);
     };
 
 #endif
