@@ -7,7 +7,7 @@
     /* -------------------------------------------------------------------------- */
     /*                            Constantes generales                            */
     /* -------------------------------------------------------------------------- */
-        #define ADC_RES                     analogRead(PADC_VREF)
+        #define ADC_RES                     0.0008056640625
         #define BYTE_FULL                   255U 
         #define FRECUENCIA_LORA             433.0F              //Portadora = 433 MHz
         #define ANCHO_DE_BANDA_LORA         31.25F              //BW = 31,25 kHz
@@ -29,6 +29,30 @@
                      "el puerto serie auxiliar del dispositivo."
         #else
             #define ERROR_MONITOR_ENABLED
+        #endif
+    /* -------------------------------------------------------------------------- */
+    
+    /* -------------------------------------------------------------------------- */
+    /*                                     USB                                    */
+    /* -------------------------------------------------------------------------- */
+        #ifdef USB_DISABLED        
+            #undef USB_ENABLED
+            #warning "El puerto USB del dispositivo fue desactivado"
+        #else
+            #define USB_ENABLED
+        #endif
+    /* -------------------------------------------------------------------------- */
+    
+    /* -------------------------------------------------------------------------- */
+    /*                                 UART3 Debug                                */
+    /* -------------------------------------------------------------------------- */
+        #ifdef UART3_DEBUG_DISABLED        
+            #undef UART3_DEBUG_ENABLED
+            #warning "Al desactivar los leds del monitor los errores no serán "\
+                     "expresados visualmente. En su defecto serán enviados por "\
+                     "el puerto serie auxiliar del dispositivo."
+        #else
+            #define UART3_DEBUG_ENABLED
         #endif
     /* -------------------------------------------------------------------------- */
     
