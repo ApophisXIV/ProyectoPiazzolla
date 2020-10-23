@@ -1,5 +1,7 @@
 #include <Hardware/Hardware.h>
 
+//HardwareSerial Serial3(USART3);
+
 int main (){
 
     Hardware_Tests PCB_Transmisor;
