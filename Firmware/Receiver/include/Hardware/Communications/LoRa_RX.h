@@ -12,36 +12,19 @@
 
     #include <Hardware/Analog/LDO.h>
 
-    #define DEBUG_RX_LORA
-    
-    #ifdef DEBUG_RX_LORA
-        #include <Hardware/Diagnostic/Monitor.h>
-    #endif
+    #include <Hardware/Diagnostic/Monitor.h>
 
+    #define DEBUG_LORA
 
-    class LoRa_RX : protected Error_Monitor , public LDO_Reg{
+    class LoRa_RX : protected Error_Monitor , public LDO_Reg , virtual public USBSerial {
         
         SX1276 sx1276 = new Module(CS_RF,DIO0,RESET_RF,DIO1);
         
-        #ifdef DEBUG_RX_LORA
-            USBSerial USB_RX_LORA;
-        #endif
-
         public:
 
         LoRa_RX();
 
         uint8_t selfTest();
-
-        void sendTemperatura();
-
-        void sendPresion();
-            
-        void sendOrientacion();
-
-        void sendVLDO();
-
-        void sendVBatt();
         
         private:
 
@@ -66,8 +49,6 @@
                                                 //Tiene que inicializarse antes de usarse.
 
         uint8_t echoTest();
-
-        bool cambiarReceptor();
 
         static void LoRa_ISR_DIO0();    //Tiene que ser static porque 
                                         //no puede perderse la direccion 
