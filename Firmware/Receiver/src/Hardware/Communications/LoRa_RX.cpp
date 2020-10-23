@@ -7,7 +7,6 @@
     LoRa_RX::LoRa_RX(){
 
         LoRa_RX::setGPIO();
-
     }
 
     void LoRa_RX::setGPIO(){
@@ -19,7 +18,7 @@
          
     }
 
-    uint8_t LoRa_RX::selfTest(){
+    uint8_t LoRa_RX:: selfTest(){
 
         //Comprobaciones
         //No hay error --> 0
@@ -30,9 +29,10 @@
     /* --------------------- Inicializacion del modulo LoRa --------------------- */
         if(LoRa_RX::LDO_Reg::selfTest()){
             
-            float_t VLDO = analogRead(LDO_ADC)*0.0008056640625;
-
             #ifdef DEBUG_RX_LORA
+           
+                float_t VLDO = analogRead(LDO_ADC)*0.0008056640625;
+            
                 USB_RX_LORA.print("\nError LDO. V: \n");
                 USB_RX_LORA.println(VLDO);
                 
@@ -45,7 +45,13 @@
             return (7);
         }
 
-        else if((sx1276.begin())){
+        else if ((sx1276.begin(FRECUENCIA_LORA,\
+                               ANCHO_DE_BANDA_LORA,\
+                               FACTOR_DE_DISPERSION_LORA,\
+                               CODING_RATE_LORA,\
+                               SYNC_WORD_LORA,\
+                               POTENCIA_LORA,PREAMBULO_LORA,\
+                               GANANCIA_AGC_AUTO))||(sx1276.startReceive())){
 
             #ifdef DEBUG_RX_LORA
                 USB_RX_LORA.printf("\nError en el begin. L:48\n");
@@ -58,16 +64,14 @@
         
         else{
 
-            sx1276.setFrequency(FRECUENCIA_LORA);
-            sx1276.setBandwidth(ANCHO_DE_BANDA_LORA);
-            sx1276.setSpreadingFactor(FACTOR_DE_DISPERSION_LORA);
-            sx1276.setCodingRate(CODING_RATE_LORA);
-            sx1276.setSyncWord(SYNC_WORD_LORA);
-            sx1276.setOutputPower(POTENCIA_LORA);
-            sx1276.setPreambleLength(PREAMBULO_LORA);
-            sx1276.setGain(GANANCIA_AGC_AUTO);
-
-            sx1276.startReceive();//Ver de ponerlo de nuevo en el if de arriba
+            // sx1276.setFrequency(FRECUENCIA_LORA);
+            // sx1276.setBandwidth(ANCHO_DE_BANDA_LORA);
+            // sx1276.setSpreadingFactor(FACTOR_DE_DISPERSION_LORA);
+            // sx1276.setCodingRate(CODING_RATE_LORA);
+            // sx1276.setSyncWord(SYNC_WORD_LORA);
+            // sx1276.setOutputPower(POTENCIA_LORA);
+            // sx1276.setPreambleLength(PREAMBULO_LORA);
+            // sx1276.setGain(GANANCIA_AGC_AUTO);
 
             tempVarEchoTest->tempEchoTestValue = echoTest();
 
@@ -103,16 +107,6 @@
         return (4);        
        
     }
-    
-    void LoRa_RX::sendTemperatura(){}
-    
-    void LoRa_RX::sendPresion(){}    
-    
-    void LoRa_RX::sendOrientacion(){}
-    
-    void LoRa_RX::sendVLDO(){}
-    
-    void LoRa_RX::sendVBatt(){}
     
     //Se incializa el flag asociado a la accion de un paquete
     volatile bool LoRa_RX::flagPaquete = 0;
