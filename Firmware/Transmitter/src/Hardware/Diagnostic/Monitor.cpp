@@ -4,6 +4,12 @@
 
     #include <Hardware/Diagnostic/Monitor.h>
 
+    Error_Monitor::Error_Monitor(){
+        
+        Error_Monitor::setGPIO();
+
+    }
+
     void Error_Monitor::setGPIO(){
 
         pinMode(LED_ERROR_A,1);
@@ -16,165 +22,171 @@
 
         for (uint8_t i=0; i<15; i++){
 
-            ErrorValue(i);
+            Error_Monitor::errorValue(i);
             delayNoBloqueante(10);
         }
 
-        ErrorValue(0);
+        Error_Monitor::errorValue(0);
 
     }
     
-    void Error_Monitor::BarridoUSB_Conectando(){
+    void Error_Monitor::dualBaliza_USART_Conectando(){
 
-        ErrorCodeInternal(1,0,0,0,20);
-        ErrorCodeInternal(0,1,0,0,20);
-        ErrorCodeInternal(0,0,1,0,20);
-        ErrorCodeInternal(0,0,0,1,20);
-        ErrorCodeInternal(0,0,0,1,20);
-        ErrorCodeInternal(0,0,1,0,20);
-        ErrorCodeInternal(0,1,0,0,20);
-        ErrorCodeInternal(1,0,0,0,20);
+        Error_Monitor::errorCodeInternal(1,1,0,0,20);
+        Error_Monitor::errorCodeInternal(0,0,1,1,20);
     }
 
-    void Error_Monitor::BeepBeep(uint8_t Transicion){
+    void Error_Monitor::barridoUSB_Conectando(){
 
-        ErrorCodeInternal(0,0,0,1,0);
-        delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,0,0);
-        delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,1,0);
-        delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,0,0);
-        delayNoBloqueante(Transicion);
+        Error_Monitor::errorCodeInternal(1,0,0,0,20);
+        Error_Monitor::errorCodeInternal(0,1,0,0,20);
+        Error_Monitor::errorCodeInternal(0,0,1,0,20);
+        Error_Monitor::errorCodeInternal(0,0,0,1,20);
+        Error_Monitor::errorCodeInternal(0,0,0,1,20);
+        Error_Monitor::errorCodeInternal(0,0,1,0,20);
+        Error_Monitor::errorCodeInternal(0,1,0,0,20);
+        Error_Monitor::errorCodeInternal(1,0,0,0,20);
     }
 
-    void Error_Monitor::BeepBeepAll(uint8_t Transicion){
+    void Error_Monitor::beepBeep(uint8_t Transicion){
 
-        ErrorCodeInternal(1,1,1,1,0);
+        Error_Monitor::errorCodeInternal(0,0,0,1,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,0,0);
+        Error_Monitor::errorCodeInternal(0,0,0,0,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(1,1,1,1,0);
+        Error_Monitor::errorCodeInternal(0,0,0,1,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,0,0);
+        Error_Monitor::errorCodeInternal(0,0,0,0,0);
         delayNoBloqueante(Transicion);
     }
 
-    void Error_Monitor::MensajeEntrante(uint8_t Transicion){
+    void Error_Monitor::beepBeepAll(uint8_t Transicion){
 
-        ErrorCodeInternal(1,0,0,1,0);
+        Error_Monitor::errorCodeInternal(1,1,1,1,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(1,1,1,1,0);
+        Error_Monitor::errorCodeInternal(0,0,0,0,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,1,1,0,0);
+        Error_Monitor::errorCodeInternal(1,1,1,1,0);
         delayNoBloqueante(Transicion);
-        ErrorCodeInternal(0,0,0,0,0);
+        Error_Monitor::errorCodeInternal(0,0,0,0,0);
         delayNoBloqueante(Transicion);
     }
 
-    uint8_t Error_Monitor::ErrorValue(uint8_t Error){
+    void Error_Monitor::mensajeEntrante(uint8_t Transicion){
+
+        Error_Monitor::errorCodeInternal(1,0,0,1,0);
+        delayNoBloqueante(Transicion);
+        Error_Monitor::errorCodeInternal(1,1,1,1,0);
+        delayNoBloqueante(Transicion);
+        Error_Monitor::errorCodeInternal(0,1,1,0,0);
+        delayNoBloqueante(Transicion);
+        Error_Monitor::errorCodeInternal(0,0,0,0,0);
+        delayNoBloqueante(Transicion);
+    }
+
+    uint8_t Error_Monitor::errorValue(uint8_t Error){
 
         switch (Error){
 
             case 1:
 
-            ErrorCodeInternal(0,0,0,1,0);
+            Error_Monitor::errorCodeInternal(0,0,0,1,0);
             
             break;
 
             case 2:
 
-            ErrorCodeInternal(0,0,1,0,0);
+            Error_Monitor::errorCodeInternal(0,0,1,0,0);
         
             break;
 
             case 3:
             
-            ErrorCodeInternal(0,0,1,1,0);
+            Error_Monitor::errorCodeInternal(0,0,1,1,0);
 
             break;
 
             
             case 4:
             
-            ErrorCodeInternal(0,1,0,0,0);
+            Error_Monitor::errorCodeInternal(0,1,0,0,0);
 
             break;
 
             
             case 5:
             
-            ErrorCodeInternal(0,1,0,1,0);
+            Error_Monitor::errorCodeInternal(0,1,0,1,0);
 
             break;
 
             
             case 6:
             
-            ErrorCodeInternal(0,1,1,0,0);
+            Error_Monitor::errorCodeInternal(0,1,1,0,0);
 
             break;
 
             
             case 7:
             
-            ErrorCodeInternal(0,1,1,1,0);
+            Error_Monitor::errorCodeInternal(0,1,1,1,0);
 
             break;
 
             
             case 8:
             
-            ErrorCodeInternal(1,0,0,0,0);
+            Error_Monitor::errorCodeInternal(1,0,0,0,0);
 
             break;
 
             
             case 9:
             
-            ErrorCodeInternal(1,0,0,1,0);
+            Error_Monitor::errorCodeInternal(1,0,0,1,0);
 
             break;
 
             
             case 10:
             
-            ErrorCodeInternal(1,0,1,0,0);
+            Error_Monitor::errorCodeInternal(1,0,1,0,0);
 
             break;
 
             
             case 11:
             
-            ErrorCodeInternal(1,0,1,1,0);
+            Error_Monitor::errorCodeInternal(1,0,1,1,0);
 
             break;
 
             
             case 12:
             
-            ErrorCodeInternal(1,1,0,0,0);
+            Error_Monitor::errorCodeInternal(1,1,0,0,0);
 
             break;
 
             
             case 13:
             
-            ErrorCodeInternal(1,1,0,1,0);
+            Error_Monitor::errorCodeInternal(1,1,0,1,0);
 
             break;
 
             
             case 14:
             
-            ErrorCodeInternal(1,1,1,0,0);
+            Error_Monitor::errorCodeInternal(1,1,1,0,0);
 
             break;
 
             
             case 15:
             
-            ErrorCodeInternal(1,1,1,1,0);
+            Error_Monitor::errorCodeInternal(1,1,1,1,0);
 
             break;
 
@@ -182,29 +194,29 @@
 
             //Revisar Juego de luces
             
-            ErrorCodeInternal(1,0,0,0,80);
+            Error_Monitor::errorCodeInternal(1,0,0,0,80);
 
-            ErrorCodeInternal(1,1,0,0,80);
+            Error_Monitor::errorCodeInternal(1,1,0,0,80);
 
-            ErrorCodeInternal(1,1,1,0,80); 
+            Error_Monitor::errorCodeInternal(1,1,1,0,80); 
 
-            ErrorCodeInternal(1,1,1,1,80);
+            Error_Monitor::errorCodeInternal(1,1,1,1,80);
 
-            ErrorCodeInternal(0,0,0,0,0);
+            Error_Monitor::errorCodeInternal(0,0,0,0,0);
 
-            ErrorCodeInternal(1,1,1,1,0);
-
-            delayNoBloqueante(200);
-
-            ErrorCodeInternal(0,0,0,0,0);
+            Error_Monitor::errorCodeInternal(1,1,1,1,0);
 
             delayNoBloqueante(200);
 
-            ErrorCodeInternal(1,1,1,1,0);
+            Error_Monitor::errorCodeInternal(0,0,0,0,0);
 
             delayNoBloqueante(200);
 
-            ErrorCodeInternal(0,0,0,0,0);
+            Error_Monitor::errorCodeInternal(1,1,1,1,0);
+
+            delayNoBloqueante(200);
+
+            Error_Monitor::errorCodeInternal(0,0,0,0,0);
 
             delayNoBloqueante(200);
             
@@ -214,7 +226,7 @@
         return (0);
     }
 
-    void Error_Monitor::ErrorCodeInternal(bool LED_D, bool LED_C, bool LED_B, bool LED_A, uint8_t Transicion) {
+    void Error_Monitor::errorCodeInternal(bool LED_D, bool LED_C, bool LED_B, bool LED_A, uint8_t Transicion) {
 
         digitalWrite(LED_ERROR_A,LED_A);
         delayNoBloqueante(Transicion);
