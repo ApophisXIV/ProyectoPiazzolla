@@ -6,19 +6,27 @@
 
     #include <Hardware/GPIO.h>
 
+    #include <Hardware/Utilities/delayNB.h>
+
     #include <Hardware/Utilities/floatTo2Bytes.h>
 
-    class LDO_Reg{
+    #include <Hardware/Communications/UART_debug.h>
+
+    #define DEBUG_LDO
+
+    class LDO_Reg : virtual public UART3_DEBUG{
 
         public:
-
-        void setGPIO();
+        
+        LDO_Reg();
 
         bool selfTest();
 
         uint16_t tensionActual();
 
         private:
+        
+        void setGPIO();
         
         void tensionRead();
 
