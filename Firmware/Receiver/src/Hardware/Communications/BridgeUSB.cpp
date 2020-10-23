@@ -4,9 +4,16 @@
 
     #include <Hardware/Communications/BridgeUSB.h>
 
-    USB_PORT_RX::USB_PORT_RX (bool nativo_uart){
+    USB_PORT_RX::USB_PORT_RX (bool nativo_uart , bool fueInicializado) : USBSerial(){
 
-        USB_PORT_RX::setGPIO(nativo_uart);
+        if(!fueInicializado){
+
+            USB_PORT_RX::setGPIO(nativo_uart);
+
+            USB_PORT_RX::inicializar();
+        }
+
+
     }
 
     void USB_PORT_RX::setGPIO(bool nativo_uart){
@@ -18,17 +25,20 @@
 
     void USB_PORT_RX::inicializar(){
 
-        USB_RX.begin();
+        USB_PORT_RX::USBSerial::begin();
 
-        while (!USB_RX){   
+        while (!SerialUSB){   
 
             USB_PORT_RX::Error_Monitor::barridoUSB_Conectando();
         }
 
-        if(USB_RX){
+        if(SerialUSB){
 
-            USB_PORT_RX::Error_Monitor::beepBeepAll(50);
-            USB_RX.println("USB Conectado OK");
+            USB_PORT_RX::Error_Monitor::beepBeepAll(80);
+            
+            #ifdef DEBUG_USB
+                USB_PORT_RX::USBSerial::printf(F("BridgeUSB. Estado: USB Conectado OK\n"));
+            #endif
         }
     }
 
