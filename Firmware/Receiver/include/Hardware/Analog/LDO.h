@@ -6,11 +6,13 @@
 
     #include <Hardware/GPIO.h>
 
+    #include <Hardware/Utilities/delayNB.h>
+
     #include <Hardware/Utilities/floatTo2Bytes.h>
 
-    class LDO_Reg{
+    #define DEBUG_LDO
 
-        USBSerial USB_LDO;
+    class LDO_Reg : virtual public USBSerial {
 
         public:
         
@@ -22,8 +24,6 @@
 
         private:
         
-        uint32_t __tempVLDO = 0;
-
         void setGPIO();
         
         void tensionRead();
