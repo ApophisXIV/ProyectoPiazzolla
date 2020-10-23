@@ -8,17 +8,19 @@
 
     #include <Hardware/Diagnostic/Monitor.h>
 
+    #define DEBUG_USB
+
     class USB_PORT_RX: protected Error_Monitor , public USBSerial{
         
         public:
 
-        USB_PORT_RX (bool nativo_uart);
+        USB_PORT_RX (bool nativo_uart , bool fueInicializado);
 
-        void inicializar();
+        USB_PORT_RX (bool yaFueInicializado);
 
         private:
-
-        USBSerial USB_RX;
+        
+        void inicializar();
 
         void setGPIO(bool nativo_uart);
         
