@@ -32,14 +32,14 @@
     
     void Error_Monitor::barridoUSB_Conectando(){
 
-        Error_Monitor::errorCodeInternal(1,0,0,0,20);
-        Error_Monitor::errorCodeInternal(0,1,0,0,20);
-        Error_Monitor::errorCodeInternal(0,0,1,0,20);
-        Error_Monitor::errorCodeInternal(0,0,0,1,20);
-        Error_Monitor::errorCodeInternal(0,0,0,1,20);
-        Error_Monitor::errorCodeInternal(0,0,1,0,20);
-        Error_Monitor::errorCodeInternal(0,1,0,0,20);
-        Error_Monitor::errorCodeInternal(1,0,0,0,20);
+        Error_Monitor::errorCodeInternal(1,0,0,0,50);
+        Error_Monitor::errorCodeInternal(0,1,0,0,50);
+        Error_Monitor::errorCodeInternal(0,0,1,0,50);
+        Error_Monitor::errorCodeInternal(0,0,0,1,50);
+        Error_Monitor::errorCodeInternal(0,0,0,1,50);
+        Error_Monitor::errorCodeInternal(0,0,1,0,50);
+        Error_Monitor::errorCodeInternal(0,1,0,0,50);
+        Error_Monitor::errorCodeInternal(1,0,0,0,50);
     }
 
     void Error_Monitor::beepBeep(uint8_t Transicion){
